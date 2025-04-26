@@ -9,8 +9,11 @@ size = Vector2(128, 128)
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_onrkg")
-speed = 300
+maxSpeed = 200
+acceleration = 800
+friction = 600
 jumpSpeed = 400
+maxJump = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
