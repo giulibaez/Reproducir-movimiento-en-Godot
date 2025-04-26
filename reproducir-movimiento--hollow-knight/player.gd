@@ -37,4 +37,7 @@ func Jump(delta):
 		velocity.y *= 0.2
 	
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		if velocity.y < 0: # si el personaje esta subiendo
+			velocity.y += gravity * delta * 0.6 # reduce el efecto de la gravedad al 60%
+		else:
+			velocity.y += gravity * delta * 1.5
